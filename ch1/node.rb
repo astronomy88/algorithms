@@ -1,6 +1,6 @@
 class Node
 
-	attr_reader :item, :next
+	attr_accessor :item, :next
 
 	def initialize(item)	
 		@item = item
