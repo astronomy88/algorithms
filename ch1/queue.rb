@@ -1,6 +1,6 @@
 class Queue
 
-	attr_reader :queue
+	attr_reader :queue, :tail, :head
 
 	def initialize
 		@head = 0
@@ -9,8 +9,8 @@ class Queue
 	end
 
 	def enqueue item
-		@queue[@tail] = item
 		resize(self.length * 2) if (@tail > 0) && (@tail == @queue.length)
+		@queue[@tail] = item
 		@tail +=1
 		@queue
 	end
